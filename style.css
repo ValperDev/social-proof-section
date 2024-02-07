@@ -8,7 +8,31 @@
 }
 
 body {
+    font-family: "League Spartan", sans-serif;
     font-size: 0.938rem;
+}
+
+li {
+    list-style: none;
+}
+
+/* Fonts */
+@font-face {
+    font-family: "League Spartan";
+    src: url("./fonts/LeagueSpartan-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "League Spartan";
+    src: url("./fonts/LeagueSpartan-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "League Spartan";
+    src: url("./fonts/LeagueSpartan-Bold.ttf") format("truetype");
+    font-weight: 700;
 }
 
 /* Variables */
@@ -18,4 +42,43 @@ body {
     --dark-grayish-magenta: hsl(303, 10%, 53%);
     --light-grayish-magenta: hsl(300, 24%, 96%);
     --white: hsl(0, 0%, 100%);
+}
+
+.container {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+}
+
+.reviews-list {
+    display: flex;
+    gap: 2em;
+    grid-column: 1 / span end;
+}
+
+.review-card {
+    border-radius: 10px;
+    background-color: var(--very-dark-magenta);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 2em;
+}
+
+.reviewer__profile {
+    display: flex;
+}
+
+.reviewer__name {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.reviewer__verified {
+    color: var(--soft-pink);
+}
+
+.reviewer__quote {
+    color: var(--white);
+    line-height: 1.4em;
 }
