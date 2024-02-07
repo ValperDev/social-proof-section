@@ -12,6 +12,11 @@ body {
     font-size: 0.938rem;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 li {
     list-style: none;
 }
@@ -53,11 +58,15 @@ li {
     display: flex;
     gap: 2em;
     grid-column: 1 / span end;
+    align-items: flex-start;
 }
 
 .review-card {
+    display: flex;
     border-radius: 10px;
     background-color: var(--very-dark-magenta);
+    gap: 1.5em;
+    flex-direction: column;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -65,8 +74,37 @@ li {
     padding: 2em;
 }
 
+.review-card:nth-child(2) {
+    margin-top: 1em;
+}
+
+.review-card:nth-child(3) {
+    margin-top: 2em;
+}
+
 .reviewer__profile {
+    align-items: center;
     display: flex;
+    gap: 1.2em;
+}
+
+.reviewer__profile-image {
+    height: 40px;
+    width: 40px;
+}
+
+.reviewer__profile-image img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.reviewer__details {
+    display: flex;
+    gap: .4em;
+    flex-direction: column;
 }
 
 .reviewer__name {
