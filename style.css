@@ -55,26 +55,12 @@ main {
     place-items: center;
 }
 
-.decorative {
-    position: absolute;
-    z-index: -1;
-}
-
-.desktop-top {
-    top: 0;
-    left: 0;
-}
-
-.desktop-bottom {
-    bottom: 0;
-    right: 0;
-}
-
 .container {
     grid-template-columns: repeat(2, 1fr);
     display: grid;
-    max-width: 66rem;
+    max-width: 70rem;
     margin-inline: auto;
+    padding: 2em;
     row-gap: 4em;
 }
 
@@ -196,4 +182,49 @@ main {
 .reviewer__quote {
     color: var(--white);
     line-height: 1.4em;
+}
+
+@media only screen and (max-width: 50rem) {
+    .container {
+        gap: 3em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero__title {
+        font-size: 2.5em;
+    }
+
+    .rating-card {
+        flex-direction: column;
+        min-width: 100%;
+    }
+
+    .rating-card:nth-child(1),
+    .rating-card:nth-child(2) {
+        margin-right: 0;
+    }
+
+    .reviews-list {
+        grid-column: unset;
+    }
+
+    .reviews-list {
+        gap: 1em;
+        flex-direction: column;
+    }
+
+    .review-card:nth-child(2),
+    .review-card:nth-child(3) {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 66rem) {
+    .hero {
+        padding-right: 0;
+    }
 }
